@@ -45,7 +45,7 @@ export function ServicesSection() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop')",
+            "url('/servicios-002.avif')",
         }}
       >
         <div className="absolute inset-0 bg-card/95" />

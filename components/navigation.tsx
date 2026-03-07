@@ -1,26 +1,27 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#servicios", label: "Servicios" },
   { href: "#sobre-mi", label: "Sobre mí" },
   { href: "#muestras", label: "Muestras" },
   { href: "#contacto", label: "Contacto" },
-]
+];
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
@@ -32,15 +33,17 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg md:text-xl">
-                {"</>"}
-              </span>
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center">
+              <Image
+                src="/logo.png"
+                alt="logo de edelbyte"
+                width={200}
+                height={200}
+              />
             </div>
-            <span className="text-foreground font-semibold text-lg hidden sm:block">
-              DevStudio
+            <span className="text-foreground font-semibold text-xl hidden sm:block">
+              edelbyte
             </span>
           </a>
 
@@ -50,7 +53,7 @@ export function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-lg font-medium"
               >
                 {link.label}
               </a>
@@ -86,5 +89,5 @@ export function Navigation() {
         </div>
       )}
     </nav>
-  )
+  );
 }

@@ -35,7 +35,7 @@ export function PortfolioSection() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop')",
+            "url('/servicios-001.avif')",
         }}
       >
         <div className="absolute inset-0 bg-card/95" />

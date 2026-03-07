@@ -1,24 +1,27 @@
-"use client"
+"use client";
 
-import { BookOpen, Lightbulb, Handshake } from "lucide-react"
+import { BookOpen, Lightbulb, Handshake } from "lucide-react";
 
 const traits = [
   {
     icon: BookOpen,
     title: "Autor Técnico",
-    description: "Entiendo que la claridad es fundamental, tanto en el código como en la comunicación.",
+    description:
+      "Entiendo que la claridad es fundamental, tanto en el código como en la comunicación.",
   },
   {
     icon: Lightbulb,
     title: "Autodidacta",
-    description: "Prefiero las soluciones elegantes y funcionales sobre la complejidad innecesaria.",
+    description:
+      "Prefiero las soluciones elegantes y funcionales sobre la complejidad innecesaria.",
   },
   {
     icon: Handshake,
     title: "Socio Tecnológico",
-    description: "Mi objetivo es ser tu socio tecnológico, no solo alguien que escribe líneas de código.",
+    description:
+      "Mi objetivo es ser tu socio tecnológico, no solo alguien que escribe líneas de código.",
   },
-]
+];
 
 export function AboutSection() {
   return (
@@ -28,7 +31,7 @@ export function AboutSection() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1974&auto=format&fit=crop')",
+            "url('/servicios-003.avif')",
         }}
       >
         <div className="absolute inset-0 bg-background/95" />
@@ -50,17 +53,23 @@ export function AboutSection() {
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
                 Soy un desarrollador{" "}
-                <strong className="text-foreground">Full Stack</strong>. Mi enfoque es{" "}
-                <strong className="text-primary">autodidacta y pragmático</strong>: prefiero
-                las soluciones elegantes y funcionales sobre la complejidad innecesaria.
+                <strong className="text-foreground">Full Stack</strong>. Mi
+                enfoque es{" "}
+                <strong className="text-primary">
+                  autodidacta y pragmático
+                </strong>
+                : prefiero las soluciones elegantes y funcionales sobre la
+                complejidad innecesaria.
               </p>
               <p>
                 Como{" "}
-                <strong className="text-foreground">autor de libros técnicos</strong>,
-                entiendo que la claridad es fundamental, tanto en el código como en la
-                comunicación con mis clientes. Mi objetivo es ser tu{" "}
-                <strong className="text-primary">socio tecnológico</strong>, no solo
-                alguien que escribe líneas de código.
+                <strong className="text-foreground">
+                  autor de libros técnicos
+                </strong>
+                , entiendo que la claridad es fundamental, tanto en el código
+                como en la comunicación con mis clientes. Mi objetivo es ser tu{" "}
+                <strong className="text-primary">socio tecnológico</strong>, no
+                solo alguien que escribe líneas de código.
               </p>
             </div>
           </div>
@@ -89,5 +98,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
