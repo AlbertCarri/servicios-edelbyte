@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Globe, Code2, Users } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Globe, Code2, Users } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const services = [
   {
@@ -11,9 +11,9 @@ const services = [
       "No solo creo páginas, construyo herramientas de venta. Utilizo tecnologías de última generación como Next.js 15 para garantizar una velocidad de carga instantánea y un SEO técnico impecable.",
     features: [
       "Sitios corporativos y Landing Pages con dominio propio de tu marca",
-      "Optimización de rendimiento para lograr una velocidad adecuada",
+      "Optimización de rendimiento para lograr una velocidad adecuada y que tu página cargue rápido.",
     ],
-    highlight: "Next.js 15",
+    highlight: "Next.js 15, Tailwind, TypeScript",
   },
   {
     icon: Code2,
@@ -23,7 +23,7 @@ const services = [
     features: [
       "Aplicaciones web interactivas y personalizadas",
       "Integración de APIs y sistemas de autenticación seguros",
-      "Integración con pasarelas de pago (Mercado Libre)",
+      "Integración con pasarelas de pago (Mercado Pago)",
     ],
     highlight: "SaaS",
   },
@@ -32,10 +32,14 @@ const services = [
     title: "Consultoría Técnica y Social Media",
     description:
       "El código es solo una parte del éxito. Te asesoro en la arquitectura de tu proyecto y en cómo potenciar tu presencia digital para que la tecnología trabaje a favor de tu negocio.",
-    features: [],
+    features: [
+      "Configuración de Whatsapp Business",
+      "Creación y optimización de imágenes para tus redes",
+      "Te ayudo a crear tus campañas publicitarias para tu instagram y facebook"
+    ],
     highlight: "Consultoría",
   },
-]
+];
 
 export function ServicesSection() {
   return (
@@ -44,8 +48,7 @@ export function ServicesSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage:
-            "url('/servicios-002.avif')",
+          backgroundImage: "url('/servicios-002.avif')",
         }}
       >
         <div className="absolute inset-0 bg-card/95" />
@@ -79,16 +82,20 @@ export function ServicesSection() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  {service.description.split(service.highlight).map((part, i, arr) =>
-                    i < arr.length - 1 ? (
-                      <span key={i}>
-                        {part}
-                        <strong className="text-primary">{service.highlight}</strong>
-                      </span>
-                    ) : (
-                      part
-                    )
-                  )}
+                  {service.description
+                    .split(service.highlight)
+                    .map((part, i, arr) =>
+                      i < arr.length - 1 ? (
+                        <span key={i}>
+                          {part}
+                          <strong className="text-primary">
+                            {service.highlight}
+                          </strong>
+                        </span>
+                      ) : (
+                        part
+                      ),
+                    )}
                 </p>
                 {service.features.length > 0 && (
                   <ul className="space-y-2">
@@ -109,5 +116,5 @@ export function ServicesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

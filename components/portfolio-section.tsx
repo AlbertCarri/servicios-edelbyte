@@ -2,21 +2,25 @@
 
 import { ExternalLink, Utensils, FlaskConical, BookOpen } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import Link from "next/link"
+import { link } from "fs"
 
 const projects = [
   {
     icon: FlaskConical,
     title: "Edelbyte",
     description:
-      "Mi laboratorio de innovación donde desarrollo herramientas de gestión y plantillas de alto rendimiento.",
-    tags: ["Next.js", "Supabase", "SaaS"],
+      "Mi página personal. Todos mis proyectos para que los veas en un solo lugar.",
+    tags: ["Next.js", "Tailwind", "React"],
+    link:"https://edelbyte.com.ar/",
   },
   {
     icon: Utensils,
     title: "TuResto",
     description:
-      "Sistema integral de gestión para gastronomía (SaaS).",
-    tags: ["React", "Node.js", "PostgreSQL"],
+      "Sistema integral de gestión para gastronomía (SaaS) para cargar menús y poder cargar la carta escaneando el código QR.",
+    tags: ["React", "Next.js", "Supabase", "Mercado Pago"],
+    link:"https://turesto.edelbyte.com.ar",
   },
   {
     icon: BookOpen,
@@ -24,6 +28,7 @@ const projects = [
     description:
       'Autor de "Aprender programación después de los 40", una guía práctica para desarrolladores modernos que comienzan en edad adulta con este fascinante mundo.',
     tags: ["Libro", "Educación", "Desarrollo"],
+    link:"https://www.amazon.com/dp/B0GCNWKNF3",
   },
 ]
 
@@ -64,7 +69,9 @@ export function PortfolioSection() {
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <project.icon className="w-7 h-7 text-primary" />
                   </div>
+                  <Link href={project.link}>
                   <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors cursor-pointer" />
+                  </Link>
                 </div>
 
                 <h3 className="text-xl font-bold text-foreground mb-3">

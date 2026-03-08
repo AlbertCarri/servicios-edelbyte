@@ -1,27 +1,22 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { MessageCircle, Calendar, ArrowRight, Send } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { useActionState, useState } from "react";
+import { MessageCircle, Calendar, ArrowRight, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { sendForm, FormState } from "@/app/action/sendForm";
+
+const initialState: FormState = { success: false, message: "" };
 
 export function ContactSection() {
-  const [showForm, setShowForm] = useState(false)
+  const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
     consulta: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission logic here
-    console.log("Form submitted:", formData)
-    alert("Gracias por tu mensaje. Te contactaremos pronto.")
-    setFormData({ nombre: "", email: "", consulta: "" })
-    setShowForm(false)
-  }
+  });
+  const [state, handleSubmit, isPending] = useActionState(sendForm, initialState);
 
   return (
     <section id="contacto" className="relative py-24 md:py-32 overflow-hidden">
@@ -29,8 +24,7 @@ export function ContactSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage:
-            "url('/servicios-004.avif')",
+          backgroundImage: "url('/servicios-004.avif')",
         }}
       >
         <div className="absolute inset-0 bg-background/95" />
@@ -48,8 +42,8 @@ export function ContactSection() {
 
         <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto">
           Si buscas un desarrollador que entienda el negocio y aporte{" "}
-          <strong className="text-foreground">soluciones reales</strong>, estás en el
-          lugar correcto.
+          <strong className="text-foreground">soluciones reales</strong>, estás
+          en el lugar correcto.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -59,7 +53,7 @@ export function ContactSection() {
             className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-full w-full sm:w-auto"
           >
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/543489693598"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -87,11 +81,11 @@ export function ContactSection() {
         {/* Contact Form */}
         <div
           className={`overflow-hidden transition-all duration-500 ease-in-out ${
-            showForm ? "max-h-[500px] opacity-100 mt-12" : "max-h-0 opacity-0 mt-0"
+            showForm ? "max-h-125 opacity-100 mt-12" : "max-h-0 opacity-0 mt-0"
           }`}
         >
           <form
-            onSubmit={handleSubmit}
+            action={handleSubmit}
             className="bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 max-w-xl mx-auto text-left"
           >
             <div className="space-y-5">
@@ -105,11 +99,8 @@ export function ContactSection() {
                 <Input
                   id="nombre"
                   type="text"
+                  name="name"
                   placeholder="Tu nombre completo"
-                  value={formData.nombre}
-                  onChange={(e) =>
-                    setFormData({ ...formData, nombre: e.target.value })
-                  }
                   required
                   className="bg-background/50 border-border focus:border-primary"
                 />
@@ -125,11 +116,8 @@ export function ContactSection() {
                 <Input
                   id="email"
                   type="email"
+                  name="email"
                   placeholder="tu@email.com"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
                   required
                   className="bg-background/50 border-border focus:border-primary"
                 />
@@ -145,10 +133,7 @@ export function ContactSection() {
                 <Textarea
                   id="consulta"
                   placeholder="Cuéntame sobre tu proyecto o idea..."
-                  value={formData.consulta}
-                  onChange={(e) =>
-                    setFormData({ ...formData, consulta: e.target.value })
-                  }
+                  name="text"
                   required
                   rows={4}
                   className="bg-background/50 border-border focus:border-primary resize-none"
@@ -168,5 +153,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
