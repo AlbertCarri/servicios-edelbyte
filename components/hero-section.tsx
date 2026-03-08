@@ -33,7 +33,7 @@ export function HeroSection() {
           Ayudo a empresas y emprendedores a construir productos digitales,{" "}
           <strong className="text-foreground">escalables</strong> y con una
           buena experiencia de usuario. De la idea al código, con{" "}
-          <strong className="text-foreground">mentalidad senior</strong>.
+          <strong className="text-foreground">mentalidad profesional</strong>.
         </p>
 
         <Button
