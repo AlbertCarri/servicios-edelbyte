@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { ExternalLink, Utensils, FlaskConical, BookOpen } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
-import { link } from "fs"
+import { ExternalLink, Utensils, FlaskConical, BookOpen } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
+import { link } from "fs";
 
 const projects = [
   {
@@ -12,7 +12,7 @@ const projects = [
     description:
       "Mi página personal. Todos mis proyectos para que los veas en un solo lugar.",
     tags: ["Next.js", "Tailwind", "React"],
-    link:"https://edelbyte.com.ar/",
+    link: "https://edelbyte.com.ar/",
   },
   {
     icon: Utensils,
@@ -20,7 +20,7 @@ const projects = [
     description:
       "Sistema integral de gestión para gastronomía (SaaS) para cargar menús y poder cargar la carta escaneando el código QR.",
     tags: ["React", "Next.js", "Supabase", "Mercado Pago"],
-    link:"https://turesto.edelbyte.com.ar",
+    link: "https://turesto.edelbyte.com.ar",
   },
   {
     icon: BookOpen,
@@ -28,9 +28,9 @@ const projects = [
     description:
       'Autor de "Aprender programación después de los 40", una guía práctica para desarrolladores modernos que comienzan en edad adulta con este fascinante mundo.',
     tags: ["Libro", "Educación", "Desarrollo"],
-    link:"https://www.amazon.com/dp/B0GCNWKNF3",
+    link: "https://www.amazon.com/dp/B0GCNWKNF3",
   },
-]
+];
 
 export function PortfolioSection() {
   return (
@@ -39,8 +39,7 @@ export function PortfolioSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage:
-            "url('/servicios-001.avif')",
+          backgroundImage: "url('/servicios-001.avif')",
         }}
       >
         <div className="absolute inset-0 bg-card/95" />
@@ -70,7 +69,7 @@ export function PortfolioSection() {
                     <project.icon className="w-7 h-7 text-primary" />
                   </div>
                   <Link href={project.link}>
-                  <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors cursor-pointer" />
+                    <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors cursor-pointer" />
                   </Link>
                 </div>
 
@@ -97,5 +96,5 @@ export function PortfolioSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
