@@ -61,7 +61,7 @@ export function ServicesSection() {
             Lo que ofrezco
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mt-4">
-            Servicios
+            Servicios digitales a medida
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mt-6" />
         </div>

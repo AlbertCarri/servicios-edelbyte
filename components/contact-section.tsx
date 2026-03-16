@@ -16,7 +16,10 @@ export function ContactSection() {
     email: "",
     consulta: "",
   });
-  const [state, handleSubmit, isPending] = useActionState(sendForm, initialState);
+  const [state, handleSubmit, isPending] = useActionState(
+    sendForm,
+    initialState,
+  );
 
   return (
     <section id="contacto" className="relative py-24 md:py-32 overflow-hidden">
@@ -33,10 +36,10 @@ export function ContactSection() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span className="text-primary text-sm font-semibold tracking-wider uppercase">
-          Conversemos
+          Trabajemos juntos
         </span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mt-4 mb-6">
-          ¿Listo para llevar tu idea al siguiente nivel?
+          en tu próximo proyecto desde Campana
         </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-8" />
 
