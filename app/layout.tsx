@@ -60,18 +60,18 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Tu Negocio Digital",
+    name: "Servicios de Desarrollo de Software y paginas web",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Mitre 123", // Cambiá por la tuya
+      streetAddress: "Avenida Bellomo 131", 
       addressLocality: "Campana",
       addressRegion: "Buenos Aires",
       postalCode: "2804",
       addressCountry: "AR",
     },
-    url: "https://tuweb.com",
-    telephone: "+5411XXXXXXXX",
-    image: "https://tuweb.com/logo.png",
+    url: "https://servicios.edelbyte.com.ar",
+    telephone: "+543489693598",
+    image: "https://servicios.edelbyte.com.ar/servicios.png",
   };
   return (
     <html lang="en">
