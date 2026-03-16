@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -56,9 +57,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Tu Negocio Digital",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Av. Mitre 123", // Cambiá por la tuya
+      addressLocality: "Campana",
+      addressRegion: "Buenos Aires",
+      postalCode: "2804",
+      addressCountry: "AR",
+    },
+    url: "https://tuweb.com",
+    telephone: "+5411XXXXXXXX",
+    image: "https://tuweb.com/logo.png",
+  };
   return (
     <html lang="en">
       <body className="font-sans antialiased">
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
         <Analytics />
       </body>
