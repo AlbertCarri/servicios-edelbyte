@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     title: "Desarrollo de Software a medida y Estrategia Digital",
     description:
       "Ayudo a empresas y emprendedores a construir productos digitales, escalables y con una buena experiencia de usuario. De la idea al código, con mentalidad profesional.",
-    siteName: URL_BASE,
+    siteName: "edelbyte",
     images: [
       {
         url: "https://servicios.edelbyte.com.ar/servicios.png",
@@ -61,6 +60,10 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Servicios de Desarrollo de Software y paginas web",
+    description: "Desarrollo de software, aplicaciones web y páginas web para empresas y emprendedores en Campana, Buenos Aires.",
+    url: "https://servicios.edelbyte.com.ar",
+    telephone: "+543489693598",
+    image: "https://servicios.edelbyte.com.ar/servicios.png",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Avenida Bellomo 131", 
@@ -69,14 +72,35 @@ export default function RootLayout({
       postalCode: "2804",
       addressCountry: "AR",
     },
-    url: "https://servicios.edelbyte.com.ar",
-    telephone: "+543489693598",
-    image: "https://servicios.edelbyte.com.ar/servicios.png",
+    
+    geo: {
+    "@type": "GeoCoordinates",
+    latitude: -34.19794,   // ← reemplazá con tus coords reales
+    longitude: -58.94399,
+  },
+
+  sameAs: [
+    "https://www.linkedin.com/in/alberto-edelmiro-carrizo-7639a186/",
+    "https://github.com/AlbertCarri",
+  ],
+  areaServed: {
+    "@type": "City",
+    name: "Campana",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Servicios de desarrollo",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Desarrollo web a medida" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Aplicaciones web" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Full Stack Development" } },
+    ],
+  },
   };
   return (
-    <html lang="en">
+    <html lang="es-AR">
       <body className="font-sans antialiased">
-        <Script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
