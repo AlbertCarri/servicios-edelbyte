@@ -16,11 +16,11 @@ const projects = [
   },
   {
     icon: Utensils,
-    title: "TuResto",
+    title: "Ejemplo de Landing Page",
     description:
-      "Sistema integral de gestión para gastronomía (SaaS) para cargar menús y poder cargar la carta escaneando el código QR.",
-    tags: ["React", "Next.js", "Supabase", "Mercado Pago"],
-    link: "https://turesto.edelbyte.com.ar",
+      "Pizzas artesanales horneadas en horno de leña, con ingredientes frescos y recetas que han pasado de generación en generación.",
+    tags: ["React", "Next.js","Tailwind"],
+    link: "https://pizzeria-landing-page.vercel.app/",
   },
   {
     icon: BookOpen,
