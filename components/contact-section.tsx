@@ -23,7 +23,6 @@ export function ContactSection() {
 
   return (
     <section id="contacto" className="relative py-24 md:py-32 overflow-hidden">
-      {/* Parallax Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
@@ -33,7 +32,6 @@ export function ContactSection() {
         <div className="absolute inset-0 bg-background/95" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span className="text-primary text-sm font-semibold tracking-wider uppercase">
           Trabajemos juntos
@@ -80,8 +78,6 @@ export function ContactSection() {
             />
           </Button>
         </div>
-
-        {/* Contact Form */}
         <div
           className={`overflow-hidden transition-all duration-500 ease-in-out ${
             showForm ? "max-h-125 opacity-100 mt-12" : "max-h-0 opacity-0 mt-0"
@@ -146,7 +142,7 @@ export function ContactSection() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6 rounded-full"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6 rounded-full cursor-pointer"
               >
                 <Send className="mr-2 h-5 w-5" />
                 Enviar

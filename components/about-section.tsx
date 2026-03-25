@@ -26,7 +26,7 @@ const traits = [
 export function AboutSection() {
   return (
     <section id="sobre-mi" className="relative py-24 md:py-32 overflow-hidden">
-      {/* Parallax Background */}
+      
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
@@ -36,11 +36,8 @@ export function AboutSection() {
       >
         <div className="absolute inset-0 bg-background/95" />
       </div>
-
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text */}
           <div>
             <span className="text-primary text-sm font-semibold tracking-wider uppercase">
               El factor humano
@@ -74,7 +71,6 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Right Column - Traits */}
           <div className="space-y-6">
             {traits.map((trait, index) => (
               <div

@@ -44,7 +44,6 @@ const services = [
 export function ServicesSection() {
   return (
     <section id="servicios" className="relative py-24 md:py-32 overflow-hidden">
-      {/* Parallax Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
@@ -54,7 +53,6 @@ export function ServicesSection() {
         <div className="absolute inset-0 bg-card/95" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-semibold tracking-wider uppercase">
