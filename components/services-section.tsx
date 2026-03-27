@@ -6,38 +6,40 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const services = [
   {
     icon: Globe,
-    title: "Diseño y Desarrollo Web Pro",
-    description:
-      "No solo creo páginas, construyo herramientas de venta. Utilizo tecnologías de última generación como Next.js 15 para garantizar una velocidad de carga instantánea y un SEO técnico impecable.",
+    title: "Si te pasa esto, no sos el único",
+    description: "",
     features: [
-      "Sitios corporativos y Landing Pages con dominio propio de tu marca",
-      "Optimización de rendimiento para lograr una velocidad adecuada y que tu página cargue rápido.",
+      "Te preguntan cosas básicas todo el tiempo",
+      "Tenés que explicar lo mismo una y otra vez.",
+      "Mostrás lo que hacés, pero no genera consultas",
+      "Sentís que podrías vender más, pero no sabés por qué no pasa",
+      "Tenés redes, pero no lográs convertir visitas en clientes",
     ],
-    highlight: "Next.js 15, Tailwind, TypeScript",
+    highlight: "No es falta de interés. Es falta de claridad.",
   },
   {
     icon: Code2,
-    title: "Desarrollo de Software & SaaS",
+    title: "No se trata solo de tener una web",
     description:
-      "Especializado en crear soluciones complejas que automatizan procesos. Si necesitas un panel de administración, una plataforma de gestión o un sistema con bases de datos en tiempo real (Supabase), puedo construirlo desde cero.",
+      "Se trata de que alguien entre y entienda en segundos:",
     features: [
-      "Aplicaciones web interactivas y personalizadas",
-      "Integración de APIs y sistemas de autenticación seguros",
-      "Integración con pasarelas de pago (Mercado Pago)",
+      "qué hacés",
+      "cómo lo hacés",
+      "y por qué debería contactarte",
     ],
-    highlight: "SaaS",
+    highlight: "Trabajo en eso: en que tu negocio se entienda fácil y genere confianza.",
   },
   {
     icon: Users,
-    title: "Consultoría Técnica y Social Media",
+    title: "Cómo trabajo",
     description:
-      "El código es solo una parte del éxito. Te asesoro en la arquitectura de tu proyecto y en cómo potenciar tu presencia digital para que la tecnología trabaje a favor de tu negocio.",
+      "",
     features: [
-      "Configuración de Whatsapp Business",
-      "Creación y optimización de imágenes para tus redes",
-      "Te ayudo a crear tus campañas publicitarias para tu instagram y facebook"
+      "Analizo cómo estás mostrando hoy tu negocio (web, redes, WhatsApp, lo que uses)",
+      "Detecto dónde se pierde la gente (dónde se confunden o se van)",
+      "Armo una solución simple para que todo sea más claro y directo",
     ],
-    highlight: "Consultoría",
+    highlight: "Menos vueltas. Más consultas reales.",
   },
 ];
 
@@ -80,34 +82,26 @@ export function ServicesSection() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  {service.description
-                    .split(service.highlight)
-                    .map((part, i, arr) =>
-                      i < arr.length - 1 ? (
-                        <span key={i}>
-                          {part}
-                          <strong className="text-primary">
-                            {service.highlight}
-                          </strong>
-                        </span>
-                      ) : (
-                        part
-                      ),
-                    )}
+                  {service.description}
                 </p>
                 {service.features.length > 0 && (
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-start gap-2 text-muted-foreground text-sm"
-                      >
-                        <span className="text-primary mt-1">•</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className="flex items-start gap-2 text-muted-foreground text-sm"
+                        >
+                          <span className="text-3xl -mt-2 text-primary">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
                 )}
+                <p className="mt-2">
+                  <strong className="text-primary">{service.highlight}</strong>
+                </p>
               </CardContent>
             </Card>
           ))}

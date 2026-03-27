@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
@@ -9,12 +9,10 @@ export function HeroSection() {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-  
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage:
-            "url('/servicios-001.avif')",
+          backgroundImage: "url('/servicios-001.avif')",
         }}
       >
         <div className="absolute inset-0 bg-background/90" />
@@ -23,16 +21,27 @@ export function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6">
           <span className="text-balance">
-            Desarrollo de <span className="text-primary">Software</span> a
-            medida y Estrategia Digital
+            Te ayudo a{" "}
+            <span className="text-primary italic">optimizar tu negocio</span>{" "}
+            con software a medida.
           </span>
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed text-pretty">
-          Ayudo a empresas y emprendedores a construir productos digitales,{" "}
-          <strong className="text-foreground">escalables</strong> y con una
-          buena experiencia de usuario. De la idea al código, con{" "}
-          <strong className="text-foreground">mentalidad profesional</strong>.
+          Si la gente te escribe para pedir información, pero
+          <strong className="text-foreground italic">
+            {" "}
+            no termina comprando
+          </strong>
+          , hay algo que no está funcionando.
+          <br />
+          Te ayudo a ordenar cómo mostrás lo que hacés para que tus clientes
+          entiendan rápido y te contacten.
+          <strong className="text-foreground">
+            {" "}
+            Con mentalidad profesional
+          </strong>
+          .
         </p>
 
         <Button
@@ -41,7 +50,7 @@ export function HeroSection() {
           className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-full"
         >
           <a href="#contacto">
-            Hablemos de tu proyecto
+            Quiero mejorar cómo vendo
             <ArrowRight className="ml-2 h-5 w-5" />
           </a>
         </Button>
@@ -53,5 +62,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
