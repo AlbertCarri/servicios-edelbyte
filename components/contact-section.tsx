@@ -51,10 +51,10 @@ export function ContactSection() {
           <Button
             asChild
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-full w-full sm:w-auto"
+            className="bg-primary text-primary-foreground hover:bg-primary/80 scale-100 hover:scale-95 duration-300 text-lg px-8 py-6 rounded-full w-full sm:w-auto"
           >
             <a
-              href="https://wa.me/543489693598"
+              href="https://wa.me/543489591808"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -67,7 +67,7 @@ export function ContactSection() {
             onClick={() => setShowForm(!showForm)}
             variant="outline"
             size="lg"
-            className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6 rounded-full w-full sm:w-auto"
+            className="border-primary text-primary hover:bg-primary/10 hover:text-amber-100 scale-100 hover:scale-95 duration-300 text-lg px-8 py-6 rounded-full w-full sm:w-auto cursor-pointer"
           >
             <Calendar className="mr-2 h-5 w-5" />
             Agendar consulta técnica
@@ -142,7 +142,7 @@ export function ContactSection() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6 rounded-full cursor-pointer"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 scale-100 hover:scale-95 duration-300 text-lg py-6 rounded-full cursor-pointer"
               >
                 <Send className="mr-2 h-5 w-5" />
                 Enviar

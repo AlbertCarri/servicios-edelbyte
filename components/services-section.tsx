@@ -13,30 +13,24 @@ const services = [
       "Tenés que explicar lo mismo una y otra vez.",
       "Mostrás lo que hacés, pero no genera consultas",
       "Sentís que podrías vender más, pero no sabés por qué no pasa",
-      "Tenés redes, pero no lográs convertir visitas en clientes",
     ],
     highlight: "No es falta de interés. Es falta de claridad.",
   },
   {
     icon: Code2,
     title: "No se trata solo de tener una web",
-    description:
-      "Se trata de que alguien entre y entienda en segundos:",
-    features: [
-      "qué hacés",
-      "cómo lo hacés",
-      "y por qué debería contactarte",
-    ],
-    highlight: "Trabajo en eso: en que tu negocio se entienda fácil y genere confianza.",
+    description: "Se trata de que alguien entre y entienda en segundos:",
+    features: ["qué hacés", "cómo lo hacés", "y por qué debería contactarte"],
+    highlight:
+      "Trabajo en eso: en que tu negocio se entienda fácil y genere confianza.",
   },
   {
     icon: Users,
     title: "Cómo trabajo",
-    description:
-      "",
+    description: "",
     features: [
       "Analizo cómo estás mostrando hoy tu negocio (web, redes, WhatsApp, lo que uses)",
-      "Detecto dónde se pierde la gente (dónde se confunden o se van)",
+      "Detecto cual es la información más importante a transmitir.",
       "Armo una solución simple para que todo sea más claro y directo",
     ],
     highlight: "Menos vueltas. Más consultas reales.",
