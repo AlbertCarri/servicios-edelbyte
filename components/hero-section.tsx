@@ -23,7 +23,7 @@ export function HeroSection() {
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed text-pretty">
-          La gente necesita ayuda con su negocio, pero
+          La gente está buscando algo que seguro tenés, pero
           <strong className="text-foreground italic">
             {" "}
             no entiende lo que ofreces.
