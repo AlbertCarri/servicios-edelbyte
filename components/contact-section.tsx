@@ -11,11 +11,7 @@ const initialState: FormState = { success: false, message: "" };
 
 export function ContactSection() {
   const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    consulta: "",
-  });
+
   const [state, handleSubmit, isPending] = useActionState(
     sendForm,
     initialState,
@@ -145,10 +141,11 @@ export function ContactSection() {
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90 scale-100 hover:scale-95 duration-300 text-lg py-6 rounded-full cursor-pointer"
               >
                 <Send className="mr-2 h-5 w-5" />
-                Enviar
+                {isPending ? "Enviando" : "Enviar"}
               </Button>
             </div>
           </form>
+          {state.success && <p>Mail enviado con exito📧</p>}
         </div>
       </div>
     </section>
